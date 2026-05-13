@@ -44,7 +44,7 @@ public class DoubleLinkedList08 {
         }
 
         Node08 newNode = new Node08(data);
-
+        
         if (current == tail) {
             newNode.prev = current;
             current.next = newNode;
@@ -67,6 +67,18 @@ public class DoubleLinkedList08 {
         while (current != null) {
             current.data.tampil();
             current = current.next;
+        }
+    }
+
+    public void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+        Node08 current = tail;
+        while (current != null) {
+            current.data.tampil();
+            current = current.prev;
         }
     }
 }
